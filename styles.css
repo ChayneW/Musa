@@ -81,7 +81,7 @@ section {
 }
 
 .contact-us {
-	background-image: url("images/Sunset-Bridge.png");
+	background-image: url("images/sunset-bridge.png");
 	/*background-image: url("images/Serene-Monochromatic-Landscape.png");*/
 	background-size: cover; 
 	background-position: bottom; 
@@ -90,7 +90,7 @@ section {
 }
 
 .start {
-	background-image: url("images/Ethereal-Ascent.png");
+	background-image: url("images/ethereal-ascent.png");
 	background-size: cover; 
 	background-position: bottom; 
 	background-repeat: no-repeat; /* Prevents the image from repeating */
