@@ -208,6 +208,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import Lenis from "lenis";
 
+
+import { inject } from '@vercel/analytics';
+
+if (import.meta.env.PROD) {
+  inject();
+};
+
 document.addEventListener("DOMContentLoaded", () => {
 	gsap.registerPlugin(ScrollTrigger, SplitText);
 
