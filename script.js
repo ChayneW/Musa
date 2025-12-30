@@ -216,11 +216,20 @@ if (import.meta.env.PROD) {
   inject();
 };
 
-posthog.init(import.meta.env.VITE_POSTHOG_KEY, {
-	api_host: import.meta.env.VITE_POSTHOG_HOST,
-	capture_pageview: true,
-	autocapture: false,
-});
+// posthog.init(import.meta.env.VITE_POSTHOG_KEY, {
+// 	api_host: import.meta.env.VITE_POSTHOG_HOST,
+// 	capture_pageview: true,
+// 	autocapture: false,
+// });
+
+import posthog from 'posthog-js'
+
+posthog.init('phc_w7SEYPkYDjoBJh9AZIgOnMbuKvsR5tZCb1XH66R56z0',
+    {
+        api_host: 'https://us.i.posthog.com',
+        person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
+    }
+)
 
 document.addEventListener("DOMContentLoaded", () => {
 	gsap.registerPlugin(ScrollTrigger, SplitText);
