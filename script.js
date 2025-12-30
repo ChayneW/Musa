@@ -207,6 +207,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import Lenis from "lenis";
+import posthog from "posthog-js";
 
 
 import { inject } from '@vercel/analytics';
@@ -214,6 +215,12 @@ import { inject } from '@vercel/analytics';
 if (import.meta.env.PROD) {
   inject();
 };
+
+posthog.init(import.meta.env.VITE_POSTHOG_KEY, {
+	api_host: import.meta.env.VITE_POSTHOG_HOST,
+	capture_pageview: true,
+	autocapture: false,
+});
 
 document.addEventListener("DOMContentLoaded", () => {
 	gsap.registerPlugin(ScrollTrigger, SplitText);
