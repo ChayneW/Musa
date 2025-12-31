@@ -240,32 +240,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const slides = [
 		{
-			title: " 1 testing 1, 3, nah test 2 if i was you...",
+			title: " Echoes preserved in ink and silence... ",
 			image: "/images/serene-monochromatic-landscape.png",
 		},
 		{
-			title: " 2 testing 1, 3, nah test 2 if i was you...",
-			image: "/images/desert-pink-moon.png",
+			title: " Under soft hum of streetlights she watch... ",
+			image: "/images/foggy-neon.png",
 		},
 		{
-			title: " 3 testing 1, 3, nah test 2 if i was you...",
+			title: " Not all battles belong to history... ",
 			image: "/images/roman-unsplash.jpg",
 		},
 		{
-			title: " 4 testing 1, 3, nah test 2 if i was you...",
+			title: " Grace sharpened into stillness... ",
 			image: "/images/pose-japan.jpg",
 		},
 		{
-			title: " 5 testing 1, 3, nah test 2 if i was you...",
+			title: " Death, dressed in bright colors... ",
 			image: "/images/skeletal-figure.png",
 		},
 		{
-			title: " 6 testing 1, 3, nah test 2 if i was you...",
+			title: " A still frame caught between empire and legend... ",
 			image: "/images/battle-japan.jpg",
 		},
 		{
-			title: " 7 testing 1, 3, nah test 2 if i was you...",
-			image: "/images/pose-japan.jpg",
+			title: " A stillness that refuses to sink... ",
+			image: "/images/solitary-figure.png",
 		},
 	];
 
