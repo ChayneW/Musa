@@ -237,8 +237,60 @@ posthog.init('phc_w7SEYPkYDjoBJh9AZIgOnMbuKvsR5tZCb1XH66R56z0',
 
 document.addEventListener("DOMContentLoaded", () => {
 
+
 	const loader = document.querySelector(".loader");
 	document.body.classList.add("is-loading");
+	
+
+	const digit1 = document.querySelector(".digit-1");
+	const digit2 = document.querySelector(".digit-2");
+	const digit3 = document.querySelector(".digit-3");
+	const digit4 = document.querySelector(".digit-4");
+
+	function splitTextIntoSpans(selector) {
+		var element = document.querySelector(selector);
+		if (element) {
+			var text = element.innerText;
+			var splitText = text.split("").map((char) => `<span>${char}</span>`).join("");
+			element.innerHTML = splitText;
+		}
+	}
+	// splitTextIntoSpans()
+
+	for(let i = 0; i < 2; i++) {
+		for(let j = 0; j < 10; j++) {
+			const div = document.createElement("div");
+			div.className = "num";
+			div.textContent = j;
+			digit3.appendChild(div);
+
+		}
+	}
+
+	const finalDigit = document.createElement("div");
+	finalDigit.className = "num";
+	finalDigit.textContent = "0";
+	digit3.appendChild(finalDigit);
+
+	function animate(digit, duration, delay = 1) {
+		const numHeight = digit.querySelector(".num").clientHeight;
+
+		const totalDistance = (digit.querySelectorAll(".num").length - 1) * numHeight;
+		gsap.to(digit, {
+		y: -totalDistance,
+		duration: duration,
+		delay: delay,
+		ease: "power2.inOut",
+		})
+	}
+
+	animate(digit3, 5);
+	animate(digit2, 6);
+	animate(digit1, 2, 5);
+	
+
+	// const loader = document.querySelector(".loader");
+	// document.body.classList.add("is-loading");
 
 	gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -411,7 +463,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		gsap.to(".loader", {
 			opacity: 0,
 			duration: .8,
-			delay: 3,
+			delay: 9,
 			ease: "power2.out",
 			onComplete: () => {
 				loader.remove();

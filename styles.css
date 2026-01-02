@@ -77,7 +77,7 @@ section {
 .loader {
 	position: fixed;
 	inset: 0;
-	z-index: 9999;
+	z-index: 99;
 
 	display: flex;
 	align-items: center;
@@ -113,13 +113,54 @@ body.is-loading {
 
 
 .logo-cont {
-	padding-top: 200px;
+	/*padding-top: 200px;*/
 }
 
 .logo-img { 
 	width: 280px; 
 	height: 160px; 
 } 
+
+/*COUNTER inside loader*/
+
+.pre-loader {
+	width:200%;
+	height: 100%;
+	/*position: fixed;*/
+	/*top: 50%;
+	right: 50%;
+*/	display: flex;
+	z-index: 9999;
+
+}
+
+.counter {
+	height: 100px;
+	display: flex;
+	font-family: "Timmons NY";
+	font-size: 100px;
+	font-weight: 400;
+	line-height: 150px;
+	clip-path: polygon(0 0, 100% 0, 100% 100px, 0 100px);
+}
+
+
+.digit-1,
+.digit-2,
+.digit-3,
+.digit-4 {
+	position: relative;
+	top: -15px;
+
+	display: flex;
+  	flex-direction: column;
+} 
+
+.offset {
+	position: relative;
+	right: -7.5px;
+}
+
 /*LOADER END*/
 
 
