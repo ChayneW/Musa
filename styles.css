@@ -70,6 +70,59 @@ section {
   	height: auto;*/
 }
 
+
+/*LOADER:*/
+
+/* Loader overlay */
+.loader {
+	position: fixed;
+	inset: 0;
+	z-index: 9999;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background: black;
+	color: white;
+
+	pointer-events: all;
+}
+
+/* Centered content */
+.loader-inner {
+	text-align: center;
+	justify-content: center;
+}
+
+/* Subtle motion-friendly text */
+.loader-label {
+	font-family: "Geist Mono";
+	font-size: 0.85rem;
+	letter-spacing: 0.35em;
+	text-transform: uppercase;
+	opacity: 0.85;
+	align-content: center;
+	padding-top: 200px;
+}
+
+
+body.is-loading {
+	overflow: hidden;
+}
+
+
+.logo-cont {
+	padding-top: 200px;
+}
+
+.logo-img { 
+	width: 280px; 
+	height: 160px; 
+} 
+/*LOADER END*/
+
+
 .intro, .outro {
 	padding: 2rem;
 	align-content: center;

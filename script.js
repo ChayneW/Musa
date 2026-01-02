@@ -230,7 +230,16 @@ posthog.init('phc_w7SEYPkYDjoBJh9AZIgOnMbuKvsR5tZCb1XH66R56z0',
     }
 )
 
+
+// const loader = document.querySelector(".loader");
+// document.body.classList.add("is-loading");
+
+
 document.addEventListener("DOMContentLoaded", () => {
+
+	const loader = document.querySelector(".loader");
+	document.body.classList.add("is-loading");
+
 	gsap.registerPlugin(ScrollTrigger, SplitText);
 
 	const lenis = new Lenis();
@@ -393,6 +402,23 @@ document.addEventListener("DOMContentLoaded", () => {
 		preloadedImages = images;
 		createIndices();
 		initScrollTrigger();
+
+
+
+		// loading loader here:
+
+		// Fade out loader
+		gsap.to(".loader", {
+			opacity: 0,
+			duration: .8,
+			delay: 3,
+			ease: "power2.out",
+			onComplete: () => {
+				loader.remove();
+				document.body.classList.remove("is-loading");
+			},
+		}); 
+
 	});
 });
 
